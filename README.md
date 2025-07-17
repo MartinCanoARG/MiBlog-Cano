@@ -2,6 +2,11 @@
 
 Bienvenido a **Mi Blog**, una aplicación web desarrollada con Django como proyecto final del curso de Python en Coderhouse. Esta plataforma permite a los usuarios registrarse, crear un perfil, publicar páginas personalizadas y enviarse mensajes privados entre ellos.
 
+
+## 📺 Demo en YouTube
+
+[![Mirá el demo en YouTube](https://img.youtube.com/vi/QJK_RYJIMDI/0.jpg)](https://youtu.be/QJK_RYJIMDI)
+
 ---
 
 ## 🚀 Funcionalidades

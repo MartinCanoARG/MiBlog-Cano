@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>📤 Mensajes Enviados</h2>
+  {% if messages %}
+    <ul>
+      {% for msg in messages %}
+        <li>
+          <strong>Para:</strong> {{ msg.receiver.username }} |
+          <strong>Fecha:</strong> {{ msg.timestamp|date:"d/m/Y H:i" }}
+          <br>
+          <a href="{% url 'messenger:view_message' msg.pk %}">Ver mensaje</a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No enviaste ningún mensaje.</p>
+  {% endif %}
+{% endblock %}

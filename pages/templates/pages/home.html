@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+<h2>Bienvenido a Mi Blog</h2>
+<p>Esta es la página principal de tu proyecto final. Desde aquí podés navegar a las distintas secciones usando la barra superior.</p>
+
+{% if user.is_authenticated %}
+    <p>Hola, {{ user.username }} 👋</p>
+{% else %}
+    <p><a href="{% url 'login' %}">Iniciá sesión</a> o <a href="{% url 'signup' %}">registrate</a> para comenzar.</p>
+{% endif %}
+{% endblock %}

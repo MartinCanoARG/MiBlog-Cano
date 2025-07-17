@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>📥 Bandeja de Entrada</h2>
+  {% if messages %}
+    <ul>
+      {% for msg in messages %}
+        <li>
+          <strong>De:</strong> {{ msg.sender.username }} |
+          <strong>Fecha:</strong> {{ msg.timestamp|date:"d/m/Y H:i" }} |
+          <strong>{% if not msg.is_read %}<span style="color: red;">(Nuevo)</span>{% endif %}</strong>
+          <br>
+          <a href="{% url 'messenger:view_message' msg.pk %}">Ver mensaje</a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No tenés mensajes en tu bandeja de entrada.</p>
+  {% endif %}
+{% endblock %}
